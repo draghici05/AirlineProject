@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirlineProject.Classes
 {
-    internal class Route
+    internal class Ticket
     {
-
     }
 }
