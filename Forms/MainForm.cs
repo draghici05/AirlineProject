@@ -14,18 +14,29 @@ namespace AirlineProject
     {
         public MainForm()
         {
+
             InitializeComponent();
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
