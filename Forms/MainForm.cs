@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AirlineProject.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +38,21 @@ namespace AirlineProject
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Statistics statsWindow = new Statistics();
+            statsWindow.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {        
         }
     }
 }
