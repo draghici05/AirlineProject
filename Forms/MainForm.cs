@@ -20,10 +20,7 @@ namespace AirlineProject
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
+      
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -45,14 +42,5 @@ namespace AirlineProject
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Statistics statsWindow = new Statistics();
-            statsWindow.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {        
-        }
     }
 }

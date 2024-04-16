@@ -32,9 +32,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -74,6 +74,17 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Statistics";
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.Location = new System.Drawing.Point(378, 552);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(197, 51);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Account";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -99,17 +110,6 @@
             this.button5.TabIndex = 7;
             this.button5.Text = "Statistics";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(378, 552);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(197, 51);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Account";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // Statistics
             // 
@@ -137,8 +137,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
     }
 }
