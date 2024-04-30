@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace AirlineProject.Forms
 {
-    public partial class Statistics : Form
+    public partial class Tickets : Form
     {
-        public Statistics()
+        public Tickets()
         {
             InitializeComponent();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MainForm mainPage = new MainForm();
-            mainPage.Show();
-            this.Close();
         }
     }
 }

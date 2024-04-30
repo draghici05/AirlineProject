@@ -50,25 +50,34 @@
     <Compile Include="Classes\Company.cs" />
     <Compile Include="Classes\Route.cs" />
     <Compile Include="Classes\Ticket.cs" />
+    <Compile Include="Forms\Flights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flights.Designer.cs">
+      <DependentUpon>Flights.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Statistics.cs">
+    <Compile Include="Forms\Tickets.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Statistics.Designer.cs">
-      <DependentUpon>Statistics.cs</DependentUpon>
+    <Compile Include="Forms\Tickets.Designer.cs">
+      <DependentUpon>Tickets.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Flights.resx">
+      <DependentUpon>Flights.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Statistics.resx">
-      <DependentUpon>Statistics.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tickets.resx">
+      <DependentUpon>Tickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -91,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
