@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AirlineProject.Forms
+namespace AirlineProject.Controls
 {
-    public partial class Flights : Form
+    public partial class HomePage : UserControl
     {
-        public Flights()
+        public HomePage()
         {
             InitializeComponent();
         }

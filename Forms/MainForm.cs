@@ -22,28 +22,19 @@ namespace AirlineProject
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           /* dateTimePicker1.MinDate = DateTime.Today;
-            dateTimePicker1.MaxDate = DateTime.Today.AddDays(14);
-            dateTimePicker2.MinDate = DateTime.Today;
-            dateTimePicker2.MaxDate = dateTimePicker1.MaxDate.AddDays(21);*/
+           
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           /* string departureCity = comboBox1.Text;
-            string destination = comboBox1.Text; */  //de scris tot in usercontrol
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+       /* private void button1_Click(object sender, EventArgs e)
         {
             Flights flight = new Flights();
             flight.ShowDialog();
-        }
+        } */
 
         private void button2_Click(object sender, EventArgs e)
         {
             Tickets tickets = new Tickets();
-            tickets.Show();
+            tickets.ShowDialog();
             
         }
 
@@ -68,7 +59,13 @@ namespace AirlineProject
 
         private void button3_Click(object sender, EventArgs e)
         {
-            pictureBox1.BringToFront();
+            homePage1.BringToFront();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Statistics stats = new Statistics();
+            stats.ShowDialog();
         }
     }
 }

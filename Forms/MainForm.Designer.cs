@@ -35,16 +35,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.homePage1 = new AirlineProject.Controls.HomePage();
             this.bookFlight1 = new AirlineProject.Controls.BookFlight();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -69,7 +68,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -98,43 +97,6 @@
             this.panel3.Size = new System.Drawing.Size(155, 430);
             this.panel3.TabIndex = 24;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.AliceBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 42);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Home";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.AliceBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 134);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 42);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Statistics";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(20, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 38);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "APP";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.AliceBlue;
@@ -149,23 +111,59 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // pictureBox1
+            // button4
             // 
-            this.pictureBox1.Image = global::AirlineProject.Properties.Resources.mapa;
-            this.pictureBox1.Location = new System.Drawing.Point(161, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(579, 412);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.button4.BackColor = System.Drawing.Color.AliceBlue;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(0, 134);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(156, 42);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Statistics";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.AliceBlue;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(155, 42);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Home";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // homePage1
+            // 
+            this.homePage1.Location = new System.Drawing.Point(160, 76);
+            this.homePage1.Name = "homePage1";
+            this.homePage1.Size = new System.Drawing.Size(586, 415);
+            this.homePage1.TabIndex = 25;
             // 
             // bookFlight1
             // 
             this.bookFlight1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.bookFlight1.Location = new System.Drawing.Point(161, 72);
+            this.bookFlight1.Location = new System.Drawing.Point(157, 72);
             this.bookFlight1.Name = "bookFlight1";
-            this.bookFlight1.Size = new System.Drawing.Size(593, 418);
+            this.bookFlight1.Size = new System.Drawing.Size(597, 422);
             this.bookFlight1.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(21, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 74);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "TRAVEL \r\n      APP";
             // 
             // MainForm
             // 
@@ -173,10 +171,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(754, 499);
-            this.Controls.Add(this.bookFlight1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.homePage1);
+            this.Controls.Add(this.bookFlight1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -187,7 +185,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,10 +197,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Controls.HomePage homePage1;
         private Controls.BookFlight bookFlight1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
