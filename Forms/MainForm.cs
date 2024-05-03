@@ -14,6 +14,11 @@ namespace AirlineProject
 {
     public partial class MainForm : Form
     {
+        #region SQlite
+        private const string ConnectionString = "Data source = bazasqlite.db";
+        private readonly List<FlightHistory> tickets;
+        #endregion
+
         public MainForm()
         {
 
@@ -33,7 +38,7 @@ namespace AirlineProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Tickets tickets = new Tickets();
+            FlightHistory tickets = new FlightHistory();
             tickets.ShowDialog();
             
         }

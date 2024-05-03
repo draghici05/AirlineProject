@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AirlineProject.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,17 @@ namespace AirlineProject.Controls
             string departureCity = comboBox1.Text;
             string destination = comboBox1.Text;   //de scris tot in usercontrol           
         }
-   
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(comboBox1.Text) || string.IsNullOrEmpty(comboBox2.Text))
+            {
+                MessageBox.Show("cant show anything");
+                return;
+            }
+
+            Tickets tickets = new Tickets();
+            tickets.ShowDialog();
+        }
     }
 }

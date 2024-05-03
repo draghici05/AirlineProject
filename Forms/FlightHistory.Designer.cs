@@ -1,6 +1,6 @@
 ﻿namespace AirlineProject.Forms
 {
-    partial class Tickets
+    partial class FlightHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Tickets
+            // FlightHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 551);
-            this.Name = "Tickets";
-            this.Text = "Tickets";
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(462, 499);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Name = "FlightHistory";
+            this.Text = "FlightHistory";
             this.ResumeLayout(false);
 
         }

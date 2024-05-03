@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AirlineProject.Classes
 {
+    [Serializable]
     internal class Route
-    {
-
+    {   
+        public int RouteId { get; set; }
+        public string RouteName { get; set; }
     }
 }

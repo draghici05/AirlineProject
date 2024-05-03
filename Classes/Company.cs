@@ -8,5 +8,7 @@ namespace AirlineProject.Classes
 {
     internal class Company
     {
+        public string CompanyName { get; set; }
+
     }
 }

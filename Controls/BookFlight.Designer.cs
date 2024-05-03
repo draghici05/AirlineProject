@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +40,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.EmptySpace1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EmptyPassengers = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.EmptySpace1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmptyPassengers)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -106,12 +111,13 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(151, 321);
+            this.button1.Location = new System.Drawing.Point(139, 318);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 51);
             this.button1.TabIndex = 27;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox2
             // 
@@ -123,7 +129,7 @@
             "Bucharest",
             "London",
             "Frankfurt"});
-            this.comboBox2.Location = new System.Drawing.Point(322, 24);
+            this.comboBox2.Location = new System.Drawing.Point(322, 78);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(231, 31);
             this.comboBox2.TabIndex = 26;
@@ -156,10 +162,18 @@
             "Bucharest",
             "London",
             "Frankfurt"});
-            this.comboBox1.Location = new System.Drawing.Point(322, 83);
+            this.comboBox1.Location = new System.Drawing.Point(322, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(231, 31);
             this.comboBox1.TabIndex = 23;
+            // 
+            // EmptySpace1
+            // 
+            this.EmptySpace1.ContainerControl = this;
+            // 
+            // EmptyPassengers
+            // 
+            this.EmptyPassengers.ContainerControl = this;
             // 
             // BookFlight
             // 
@@ -180,6 +194,8 @@
             this.Name = "BookFlight";
             this.Size = new System.Drawing.Size(553, 393);
             this.Load += new System.EventHandler(this.BookFlight_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.EmptySpace1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmptyPassengers)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +213,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ErrorProvider EmptySpace1;
+        private System.Windows.Forms.ErrorProvider EmptyPassengers;
     }
 }
