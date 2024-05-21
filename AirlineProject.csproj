@@ -54,7 +54,6 @@
     <Compile Include="Classes\Booking.cs" />
     <Compile Include="Classes\Company.cs" />
     <Compile Include="Classes\Route.cs" />
-    <Compile Include="Classes\Ticket.cs" />
     <Compile Include="Controls\BookFlight.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,12 +84,6 @@
     <Compile Include="Forms\FlightHistory.Designer.cs">
       <DependentUpon>FlightHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tickets.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Tickets.Designer.cs">
-      <DependentUpon>Tickets.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\BookFlight.resx">
@@ -108,24 +101,21 @@
     <EmbeddedResource Include="Forms\FlightHistory.resx">
       <DependentUpon>FlightHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tickets.resx">
-      <DependentUpon>Tickets.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -140,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mapa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Ticket Template.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

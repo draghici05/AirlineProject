@@ -81,7 +81,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(21, -1);
+            this.label1.Location = new System.Drawing.Point(11, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 74);
             this.label1.TabIndex = 25;

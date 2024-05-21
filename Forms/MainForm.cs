@@ -30,31 +30,11 @@ namespace AirlineProject
            
         }
 
-       /* private void button1_Click(object sender, EventArgs e)
-        {
-            Flights flight = new Flights();
-            flight.ShowDialog();
-        } */
-
         private void button2_Click(object sender, EventArgs e)
         {
             FlightHistory tickets = new FlightHistory();
-            tickets.ShowDialog();
+            tickets.Show();
             
-        }
-
-        private void comboBox1_Validating(object sender, CancelEventArgs e)
-        {
-           /* if (comboBox1.SelectedIndex == -1)
-            {
-                errorProvider1.SetError(comboBox1, "Space can't be left blank");
-            } */
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          /*  string departureCity = comboBox1.Text;
-            string destination = comboBox1.Text; */
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -70,7 +50,7 @@ namespace AirlineProject
         private void button4_Click(object sender, EventArgs e)
         {
             Statistics stats = new Statistics();
-            stats.ShowDialog();
+            stats.Show();
         }
     }
 }
