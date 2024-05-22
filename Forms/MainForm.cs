@@ -26,6 +26,7 @@ namespace AirlineProject
             InitializeComponent();
             _bookings = new List<Booking>();
             this.KeyPreview = true;
+            statusStrip1.Visible = false;
 
         }
 
@@ -38,6 +39,7 @@ namespace AirlineProject
         {
             FlightHistory tickets = new FlightHistory(_bookings);
             tickets.ShowDialog();
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -65,13 +67,19 @@ namespace AirlineProject
                     Statistics open = new Statistics();
                     open.ShowDialog();
                 }
+
+                if (e.KeyCode == Keys.L)
+                {
+                    statusStrip1.Visible = !statusStrip1.Visible;
+                }
             }
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is version 0.01 of the Travel App" +
-                            "\n Here are some useful shortucts: \n ALT + S to display Statistics", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            "\n Here are some useful shortucts: \n ALT + S to display Statistics" +
+                                                                "\n ALT + L to toggle Menu Bar", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
