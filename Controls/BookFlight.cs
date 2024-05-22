@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace AirlineProject.Controls
 {
@@ -17,10 +18,11 @@ namespace AirlineProject.Controls
         private FlightHistory historyForm;
         private Company Company { get; set; }
         private Booking Booking { get; set; }
+        public List<Booking> Bookings;
         public BookFlight()
         {
             Company = new Company();
-            historyForm = new FlightHistory();
+            Bookings = new List<Booking>();
             InitializeComponent();
         }
 
@@ -39,17 +41,35 @@ namespace AirlineProject.Controls
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (!ValidDestination())
             {
                 MessageBox.Show("One or more spaces are empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            Random random = new Random();
 
-            Booking booking = new Booking();
-            Company.Bookings.Add(booking);
-            historyForm.DisplayTickets();
+            Booking booking = new Booking
+            {
+                Id = 1,
+                Gate = random.Next(1, 20),
+                Seat = random.Next(1, 15),
+                FlightNo = random.Next(10, 50),
+                BookingDate = dateTimePicker1.Value
+            };
+
+            string selectCompanyName = comboBox4.SelectedItem?.ToString();
+            if (!string.IsNullOrEmpty(selectCompanyName))
+            {
+                Company company = new Company
+                {
+                    CompanyName = (_CompanyName)Enum.Parse(typeof(_CompanyName), comboBox4.SelectedItem.ToString())
+                };
+                booking.Company = company;
+            }
             
+            Bookings.Add(booking);
+            FlightHistory form = new FlightHistory(Bookings);
+            form.ShowDialog();
         }
 
         private bool ValidDestination()
@@ -63,7 +83,7 @@ namespace AirlineProject.Controls
              {
                  e.Cancel = true;
                  formError.SetError((Control)sender, "Can't leave empty spaces");
-             } */
+             } */ 
         }
 
         private void comboBox3_Validating(object sender, CancelEventArgs e)

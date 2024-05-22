@@ -14,17 +14,37 @@ namespace AirlineProject.Forms
 {
     public partial class FlightHistory : Form
     {
-        private Company Company { get; set; }
+        private List<Booking> _bookings;
+        //    Booking _booking = new Booking()  
         public FlightHistory()
         {
-            Company = new Company();
             InitializeComponent();
-            DisplayTickets();
+            _bookings = new List<Booking>();
         }
 
-        public void DisplayTickets()
+        public FlightHistory(List<Booking> bookings) : this()
         {
-            if (Company.Bookings != null)
+            _bookings = bookings;
+            foreach (var booking in _bookings)
+            {
+                DisplayTickets(booking);
+            }
+        }
+
+        public void DisplayTickets(Booking booking)
+        {
+            ListViewItem lvi = new ListViewItem(booking.Gate.ToString());
+            lvi.SubItems.Add(booking.Seat.ToString());
+            lvi.SubItems.Add(booking.FlightNo.ToString());
+            lvi.SubItems.Add(booking.BookingDate.ToString());
+            lvi.SubItems.Add(booking.Company.ToString());
+            lvi.Tag = booking;
+
+            lvFlights.Items.Add(lvi);
+        }
+    }
+}
+/* if (Company.Bookings != null)
             {
                 lvFlights.Items.Clear();
                 lvFlights.Sort();
@@ -36,7 +56,4 @@ namespace AirlineProject.Forms
 
                     lvFlights.Items.Add(lvi);
                 }  
-            }
-        }
-    }
-}
+            }*/

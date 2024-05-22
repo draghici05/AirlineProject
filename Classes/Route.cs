@@ -6,21 +6,27 @@ using System.Threading.Tasks;
 
 namespace AirlineProject.Classes
 {
+    public enum _RouteName 
+    {
+        TrailRoute,
+        VisionHorizion,
+        GrantPass,
+        OriginLights
+    };
+
     [Serializable]
     public class Route
     {   
-        public int RouteId { get; set; }
-        public string RouteName { get; set; }
-        public string DepartureCity { get; set; }
-        public string ArrivalCity { get; set; }
+        public _RouteName RouteName { get; set; }
+        //public string DepartureCity { get; set; }
+        //public string ArrivalCity { get; set; }
 
         public Route() { }
-        public Route(int routeId, string routeName, string departureCity, string arrivalCity) : this()
+        public Route( _RouteName routeName /* string departureCity, string arrivalCity */) : this()
         {
-            RouteId = routeId;
             RouteName = routeName;
-            DepartureCity = departureCity;
-            ArrivalCity = arrivalCity;
+            /*DepartureCity = departureCity;
+            ArrivalCity = arrivalCity;*/
         }
     }
 }
