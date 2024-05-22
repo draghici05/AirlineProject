@@ -13,23 +13,27 @@ namespace AirlineProject.Classes
         public int Id { get; set; } 
         public int Gate { get; set; }
         public int Seat { get; set; }
-        public int FlightNo { get; set; }
+        public string FlightNo { get; set; }
+        public string Departure { get; set; }
+        public string Arrival { get; set; }
         public DateTime BookingDate { get; set; } = DateTime.Now;
-        public List<Route> Routes { get; set; }
+        public Route Route { get; set; }
         public Company Company { get; set; }
 
         public Booking() 
         {
             Id = 1;
-            Routes = new List<Route>();
+            Route = new Route();
             Company = new Company();
         }
-        public Booking(int id, int gate, int seat, int flightNo, DateTime bookingDate) : this()
+        public Booking(int id, int gate, int seat, string flightNo, string departureCity, string arrivalCity, DateTime bookingDate) : this()
         {    
             Id = id;
             Gate = gate;
             Seat = seat;
             FlightNo = flightNo;
+            Departure = departureCity;
+            Arrival = arrivalCity;
             BookingDate = bookingDate;
         }
 

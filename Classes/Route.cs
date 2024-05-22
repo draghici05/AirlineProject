@@ -18,15 +18,11 @@ namespace AirlineProject.Classes
     public class Route
     {   
         public _RouteName RouteName { get; set; }
-        //public string DepartureCity { get; set; }
-        //public string ArrivalCity { get; set; }
 
         public Route() { }
-        public Route( _RouteName routeName /* string departureCity, string arrivalCity */) : this()
+        public Route( _RouteName routeName) : this()
         {
             RouteName = routeName;
-            /*DepartureCity = departureCity;
-            ArrivalCity = arrivalCity;*/
         }
     }
 }

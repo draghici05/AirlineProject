@@ -15,9 +15,8 @@ namespace AirlineProject.Controls
 {
     public partial class BookFlight : UserControl
     {
-        private FlightHistory historyForm;
+      //  private FlightHistory historyForm;
         private Company Company { get; set; }
-        private Booking Booking { get; set; }
         public List<Booking> Bookings;
         public BookFlight()
         {
@@ -29,9 +28,7 @@ namespace AirlineProject.Controls
         private void BookFlight_Load(object sender, EventArgs e)
         {
             dateTimePicker1.MinDate = DateTime.Today;
-            dateTimePicker1.MaxDate = DateTime.Today.AddDays(60);         
-           /* string departureCity = comboBox1.Text;
-            string arrivalCity = comboBox2.Text; */
+            dateTimePicker1.MaxDate = DateTime.Today.AddDays(60);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,21 +47,25 @@ namespace AirlineProject.Controls
 
             Booking booking = new Booking
             {
-                Id = 1,
+                Id = Bookings.Count + 1,
                 Gate = random.Next(1, 20),
-                Seat = random.Next(1, 15),
-                FlightNo = random.Next(10, 50),
-                BookingDate = dateTimePicker1.Value
+                Seat = random.Next(1, 175),
+                BookingDate = dateTimePicker1.Value,
+                Departure = comboBox1.SelectedItem.ToString(), 
+                Arrival = comboBox2.SelectedItem.ToString(),
+                FlightNo = "FL" + random.Next(10, 125).ToString(),
             };
 
-            string selectCompanyName = comboBox4.SelectedItem?.ToString();
-            if (!string.IsNullOrEmpty(selectCompanyName))
+            if (comboBox3.SelectedItem != null)
             {
-                Company company = new Company
-                {
-                    CompanyName = (_CompanyName)Enum.Parse(typeof(_CompanyName), comboBox4.SelectedItem.ToString())
-                };
-                booking.Company = company;
+                var routeName = (_RouteName)Enum.Parse(typeof(_RouteName), comboBox3.SelectedItem.ToString());
+                booking.Route = new Route(routeName);
+            }
+
+            if (comboBox4.SelectedItem != null)
+            {
+                var companyName = (_CompanyName)Enum.Parse(typeof(_CompanyName), comboBox4.SelectedItem.ToString());
+                booking.Company = new Company(companyName);
             }
             
             Bookings.Add(booking);
@@ -75,15 +76,6 @@ namespace AirlineProject.Controls
         private bool ValidDestination()
         {
             return !string.IsNullOrEmpty(comboBox1.Text.Trim());
-        }
-
-        private void comboBox1_Validating(object sender, CancelEventArgs e)
-        {
-            /* if (ValidDestination())
-             {
-                 e.Cancel = true;
-                 formError.SetError((Control)sender, "Can't leave empty spaces");
-             } */ 
         }
 
         private void comboBox3_Validating(object sender, CancelEventArgs e)
@@ -105,23 +97,5 @@ namespace AirlineProject.Controls
                 }
            }
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ValidDestinations();
-        }
-
-        private void comboBox4_Validating(object sender, CancelEventArgs e)
-        {
-            if (comboBox4 != null)
-            {
-                string noCompany = comboBox4.SelectedItem?.ToString();
-                if (string.IsNullOrEmpty(noCompany))
-                {
-                    Random random = new Random();
-                    noCompany = comboBox4.Items[random.Next(comboBox4.Items.Count)].ToString();
-                }
-            }
-        }
-
     }
 }

@@ -28,56 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lvFlights = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.GATE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SEAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FLIGHT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DESTINATION = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ARRIVAL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DATE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.PowderBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(54, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ig";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.PowderBlue;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(534, 252);
+            this.button3.Location = new System.Drawing.Point(280, 250);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(184, 46);
             this.button3.TabIndex = 2;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lvFlights
             // 
             this.lvFlights.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
-            this.GATE,
-            this.SEAT,
-            this.FLIGHT,
-            this.DESTINATION,
-            this.ARRIVAL,
-            this.DATE,
-            this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
             this.lvFlights.FullRowSelect = true;
             this.lvFlights.HideSelection = false;
             this.lvFlights.Location = new System.Drawing.Point(6, 12);
@@ -86,59 +74,51 @@
             this.lvFlights.TabIndex = 3;
             this.lvFlights.UseCompatibleStateImageBehavior = false;
             this.lvFlights.View = System.Windows.Forms.View.Details;
+            this.lvFlights.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvFlights_MouseDoubleClick);
             // 
             // ID
             // 
             this.ID.Text = "ID";
-            this.ID.Width = 26;
+            this.ID.Width = 25;
             // 
-            // GATE
+            // columnHeader3
             // 
-            this.GATE.DisplayIndex = 3;
-            this.GATE.Text = "Gate Number";
-            this.GATE.Width = 80;
+            this.columnHeader3.Text = "Company";
             // 
-            // SEAT
+            // columnHeader4
             // 
-            this.SEAT.DisplayIndex = 8;
-            this.SEAT.Text = "Seat Number";
-            this.SEAT.Width = 92;
+            this.columnHeader4.Text = "Route";
+            this.columnHeader4.Width = 85;
             // 
-            // FLIGHT
+            // columnHeader5
             // 
-            this.FLIGHT.DisplayIndex = 5;
-            this.FLIGHT.Text = "Flight Number";
-            this.FLIGHT.Width = 80;
+            this.columnHeader5.Text = "Gate";
+            this.columnHeader5.Width = 45;
             // 
-            // DESTINATION
+            // columnHeader6
             // 
-            this.DESTINATION.DisplayIndex = 6;
-            this.DESTINATION.Text = "Destination City";
-            this.DESTINATION.Width = 90;
+            this.columnHeader6.Text = "Flight Date";
+            this.columnHeader6.Width = 75;
             // 
-            // ARRIVAL
+            // columnHeader7
             // 
-            this.ARRIVAL.DisplayIndex = 7;
-            this.ARRIVAL.Text = "Arrival City";
-            this.ARRIVAL.Width = 64;
+            this.columnHeader7.Text = "Flight Number";
+            this.columnHeader7.Width = 80;
             // 
-            // DATE
+            // columnHeader8
             // 
-            this.DATE.DisplayIndex = 4;
-            this.DATE.Text = "Flight Date";
-            this.DATE.Width = 70;
+            this.columnHeader8.Text = "Departure City";
+            this.columnHeader8.Width = 80;
             // 
-            // columnHeader1
+            // columnHeader9
             // 
-            this.columnHeader1.DisplayIndex = 1;
-            this.columnHeader1.Text = "Company";
-            this.columnHeader1.Width = 58;
+            this.columnHeader9.Text = "Arrival City";
+            this.columnHeader9.Width = 80;
             // 
-            // columnHeader2
+            // columnHeader10
             // 
-            this.columnHeader2.DisplayIndex = 2;
-            this.columnHeader2.Text = "Route";
-            this.columnHeader2.Width = 45;
+            this.columnHeader10.Text = "Seat";
+            this.columnHeader10.Width = 45;
             // 
             // FlightHistory
             // 
@@ -148,7 +128,6 @@
             this.ClientSize = new System.Drawing.Size(800, 308);
             this.Controls.Add(this.lvFlights);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FlightHistory";
             this.Text = "FlightHistory";
@@ -157,18 +136,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListView lvFlights;
         private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader GATE;
-        private System.Windows.Forms.ColumnHeader SEAT;
-        private System.Windows.Forms.ColumnHeader FLIGHT;
-        private System.Windows.Forms.ColumnHeader DESTINATION;
-        private System.Windows.Forms.ColumnHeader ARRIVAL;
-        private System.Windows.Forms.ColumnHeader DATE;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }

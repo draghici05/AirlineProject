@@ -1,4 +1,5 @@
-﻿using AirlineProject.Controls;
+﻿using AirlineProject.Classes;
+using AirlineProject.Controls;
 using AirlineProject.Forms;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,13 @@ namespace AirlineProject
         private readonly List<FlightHistory> tickets;
         #endregion
 
+        private List<Booking> _bookings;
         public MainForm()
         {
-
             InitializeComponent();
+            _bookings = new List<Booking>();
+            this.KeyPreview = true;
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -32,9 +36,8 @@ namespace AirlineProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FlightHistory tickets = new FlightHistory();
-            tickets.Show();
-            
+            FlightHistory tickets = new FlightHistory(_bookings);
+            tickets.ShowDialog();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -51,6 +54,24 @@ namespace AirlineProject
         {
             Statistics stats = new Statistics();
             stats.Show();
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Alt)
+            {
+                if (e.KeyCode == Keys.S)
+                {                  
+                    Statistics open = new Statistics();
+                    open.ShowDialog();
+                }
+            }
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is version 0.01 of the Travel App" +
+                            "\n Here are some useful shortucts: \n ALT + S to display Statistics", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
