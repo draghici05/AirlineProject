@@ -1,6 +1,6 @@
 # AirlineProject
 
-Repository for the Windows Programming Class in C# 
+Repository for the Windows Programming Class project in C# 
 
 - Main page
 
